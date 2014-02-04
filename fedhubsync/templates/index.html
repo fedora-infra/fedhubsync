@@ -9,6 +9,18 @@
 How to use fedhubsync?
 ======================
 
-[...]
+To sync your repositoty on github to another host, once, you have deployed
+fedhubsync all you will need to add a git hook doing:
+
+``http post http://127.0.0.1:5000/update/ key=123 repo=fedora-infra/bodhi -f``
+
+For the <a href="https://github.com/fedora-infra/bodhi">fedora-infra/bodhi</a>
+project.
+
+The ``key`` argument is an API key unique to the application and that ensures
+the project asking to be sync is allowed to do so.
+
+Server side that key is specified in the configuration file.
+
 
 {% endblock %}
